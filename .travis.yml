@@ -1,10 +1,10 @@
 language: scala
+
+sudo: false
+
 scala:
   - 2.11.2
-  - 2.10.4
 jdk:
-  - oraclejdk7
-  - openjdk6
   - oraclejdk8
 env:
   #see https://github.com/scalatest/scalatest/pull/245
@@ -41,10 +41,6 @@ env:
 #before_script: ./travis_build.sh Compile
 script: ./travis_build.sh $MODE
 
-notifications:
-  email:
-    - bill@artima.com
-    - cheeseng@amaseng.com
 
 #after_success:
 #  # only 'scalatest/scalatest' 'master' branch is published from the first node
